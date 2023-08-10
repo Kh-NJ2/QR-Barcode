@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">QR</string>
+    <string name="back">Back</string>
+    <string name="generate">Generate</string>
+    <string name="write_something">Write SomeThing</string>
+    <string name="type3">Code 93</string>
+    <string name="type2">Code 39</string>
+    <string name="type1">Code 128</string>
+    <string name="generate_qr">Generate QR</string>
+    <string name="generate_barcode">Generate Barcode</string>
+    <string name="scan_qr_or_barcode">Scan QR or Barcode</string>
+    <string name="scan_something">Scan SomeThing</string>
+    <string name="stop_scanning">Stop</string>
+    <string name="barcode_type">Choose Barcode Type</string>
+</resources>
