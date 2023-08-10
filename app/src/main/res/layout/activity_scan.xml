@@ -8,13 +8,6 @@
     tools:context=".ScanActivity">
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-    </FrameLayout>
-
-    <FrameLayout
         android:id="@+id/card"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -35,26 +28,11 @@
                android:id="@+id/imagec"
                android:layout_width="match_parent"
                android:layout_height="match_parent"
-
                android:scaleType="centerCrop"/>
 
        </com.journeyapps.barcodescanner.DecoratedBarcodeView>
 
     </FrameLayout>
-
-<!--    <FrameLayout-->
-<!--        android:id="@+id/card2"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_margin="20dp"-->
-<!--        android:background="@drawable/bemoface2"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/resulttv"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_weight="1">-->
-
-<!--    </FrameLayout>-->
 
     <TextView
         android:id="@+id/resulttv"
@@ -63,7 +41,7 @@
         app:layout_constraintVertical_weight="1"
         android:paddingHorizontal="10dp"
         android:paddingVertical="20dp"
-        android:text="Scan SomeThing"
+        android:text="@string/scan_something"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/linear"
@@ -84,7 +62,7 @@
             android:layout_margin="20dp"
             android:background="@drawable/generatebtn"
             android:onClick="scanAndStop"
-            android:text="Stop"
+            android:text="@string/stop_scanning"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/backbtn"
@@ -97,7 +75,7 @@
             android:layout_margin="20dp"
             android:background="@drawable/backbtn"
             android:onClick="back"
-            android:text="Back"
+            android:text="@string/back"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

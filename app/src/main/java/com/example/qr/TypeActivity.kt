@@ -1,6 +1,7 @@
 package com.example.qr
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +16,8 @@ class TypeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityTypeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
     }
 

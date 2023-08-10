@@ -4,6 +4,7 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.KeyEvent
@@ -31,6 +32,7 @@ class ScanActivity : AppCompatActivity() {
 
         binding = ActivityScanBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
 
         binding.generatebtn.text = "Scan"
@@ -61,7 +63,7 @@ class ScanActivity : AppCompatActivity() {
         options.setTimeout(20000)
 //        options.addExtra(Intents.Scan.SCAN_TYPE, Intents.Scan.INVERTED_SCAN)
         options.addExtra(Intents.Scan.SCAN_TYPE, Intents.Scan.MIXED_SCAN )
-        options.setCaptureActivity(CaptureAct::class.java)
+        options.captureActivity = CaptureAct::class.java
 
         barcodeLauncher.launch(options)
 
@@ -127,7 +129,7 @@ class ScanActivity : AppCompatActivity() {
     }
 
     fun back(view: View) {
-        val intent = Intent(this, mainActivity2::class.java)
+        val intent = Intent(this, MainActivity2::class.java)
         overridePendingTransition(R.anim.fade2, R.anim.fade)
         startActivity(intent)
     }

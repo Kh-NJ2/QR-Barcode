@@ -1,6 +1,7 @@
 package com.example.qr
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.text.TextUtils
@@ -22,6 +23,8 @@ class GenerateActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_generate)
+
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
         imageView = findViewById(R.id.resultIm)
         generatetext = findViewById(R.id.et)

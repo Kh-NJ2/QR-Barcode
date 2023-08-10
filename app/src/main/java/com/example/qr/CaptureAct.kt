@@ -1,6 +1,7 @@
 package com.example.qr
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.view.View
 import com.journeyapps.barcodescanner.CaptureActivity
 import com.journeyapps.barcodescanner.DecoratedBarcodeView
@@ -9,6 +10,7 @@ class CaptureAct : CaptureActivity() {
 
     override fun initializeContent(): DecoratedBarcodeView {
         setContentView(R.layout.activity_scan)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         return (findViewById<View>(R.id.zxing_barcode_scanner) as DecoratedBarcodeView)
     }
 
