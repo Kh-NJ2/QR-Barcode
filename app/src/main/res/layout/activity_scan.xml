@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    tools:context=".ScanActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/resulttv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1">
+
+       <com.journeyapps.barcodescanner.DecoratedBarcodeView
+           android:layout_width="match_parent"
+           android:id="@+id/zxing_barcode_scanner"
+           android:layout_height="match_parent"
+           app:zxing_scanner_layout="@layout/custom_barcode_scanner">
+
+           <ImageView
+               android:id="@+id/imagec"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+
+               android:scaleType="centerCrop"/>
+
+       </com.journeyapps.barcodescanner.DecoratedBarcodeView>
+
+    </FrameLayout>
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/card2"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:background="@drawable/bemoface2"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/resulttv"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_weight="1">-->
+
+<!--    </FrameLayout>-->
+
+    <TextView
+        android:id="@+id/resulttv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="20dp"
+        android:text="Scan SomeThing"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/linear"
+        app:layout_constraintTop_toBottomOf="@+id/card" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/generatebtn"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/generatebtn"
+            android:onClick="scanAndStop"
+            android:text="Stop"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/backbtn"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/backbtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/backbtn"
+            android:onClick="back"
+            android:text="Back"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/generatebtn"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    tools:context=".GenerateActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:backgroundTint="#C8E3C2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/et">
+
+        <ImageView
+            android:id="@+id/resultIm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bemoface2" />
+
+    </androidx.cardview.widget.CardView>
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:hint="Write SomeThing"
+        android:textColorHint="@color/black"
+        android:textAlignment="center"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="20dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@id/linear"
+        app:layout_constraintTop_toBottomOf="@+id/card" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/generatebtn"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/generatebtn"
+            android:onClick="generate"
+            android:text="Generate"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/backbtn"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/backbtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/backbtn"
+            android:onClick="back"
+            android:text="Back"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/generatebtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
